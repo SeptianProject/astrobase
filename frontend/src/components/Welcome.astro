@@ -23,7 +23,7 @@ const blogs = await response.json();
       >
       </div>
     </div>
-    <div class="grid grid-cols-4 gap-3 h-full">
+    <div class="grid grid-cols-4 gap-4 h-full">
       {
         blogs?.data?.map((blog: any) => {
           return <Card title={blog.title} content={blog.content} />;
