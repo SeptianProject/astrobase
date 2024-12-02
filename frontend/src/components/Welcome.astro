@@ -6,8 +6,8 @@ const blogs = await response.json();
 ---
 
 <section class="min-h-screen w-full mx-auto bg-dark">
-  <div class="flex flex-col items-center gap-y-20 justify-center">
-    <div class="mt-12 relative size-fit">
+  <div class="flex flex-col items-center gap-y-14 justify-center">
+    <div class="mt-10 relative size-fit">
       <h1 class="text-white font-semibold text-4xl z-10">
         My
         <span
@@ -23,10 +23,9 @@ const blogs = await response.json();
       >
       </div>
     </div>
-    <div class="grid grid-cols-5 gap-3 h-full">
+    <div class="grid grid-cols-4 gap-3 h-full">
       {
         blogs?.data?.map((blog: any) => {
-          console.log("blog", blog.content);
           return <Card title={blog.title} content={blog.content} />;
         })
       }
